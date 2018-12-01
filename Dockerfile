@@ -24,7 +24,7 @@ COPY --from=0 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=0 /etc/passwd /etc/passwd
 USER myapp
 
-COPY --from=0 /go/src/github.com/ekrukov/nsk/bin/nsk2 /nsk2
+COPY --from=0 /go/src/github.com/ekrukov/nsk2/bin/nsk2 /nsk2
 EXPOSE $PORT
 
 CMD ["/nsk2"]
