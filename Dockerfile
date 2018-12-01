@@ -12,7 +12,7 @@ WORKDIR /go/src/github.com/ekrukov/nsk2
 
 # build the binary with go build
 RUN CGO_ENABLED=0 go build \
-	-o bin/nsk github.com/ekrukov/nsk/cmd/nsk2
+	-o bin/nsk2 github.com/ekrukov/nsk2/cmd/nsk2
 
 # Stage 2. Run the binary
 FROM scratch
