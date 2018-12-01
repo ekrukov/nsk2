@@ -30,7 +30,9 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, http.StatusText(http.StatusOK))
+	version := os.Getenv("RELEASE")
+
+	fmt.Fprint(w, version)
 }
 
 func helthz(w http.ResponseWriter, r *http.Request) {
